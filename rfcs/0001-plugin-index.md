@@ -1,7 +1,7 @@
 - Feature Name: `plugin_index`
 - Affected audience: Plugin Authors, Game/Tool Developers
 - RFC PR: [EndlessSkyCommunity/endless-sky#53](https://github.com/EndlessSkyCommunity/endless-sky/pull/53)
-- Relevant Issues/RFCs: [endless-sky-#707](https://github.com/endless-sky/endless-sky/issues/707)
+- Relevant Issues/RFCs: [endless-sky-#707](https://github.com/endless-sky/endless-sky/issues/707), [#2](https://github.com/endless-sky/rfcs/pull/2)
 
 # Summary
 
