@@ -1,7 +1,7 @@
 - Feature Name: `plugin_index`
 - Affected audience: Plugin Authors, Game/Tool Developers
 - RFC PR: [EndlessSkyCommunity/endless-sky#53](https://github.com/EndlessSkyCommunity/endless-sky/pull/53)
-- Relevant Issues/RFCs: [endless-sky-#707](https://github.com/endless-sky/endless-sky/issues/707)
+- Relevant Issues/RFCs: [endless-sky-#707](https://github.com/endless-sky/endless-sky/issues/707), [#2](https://github.com/endless-sky/rfcs/pull/2)
 
 # Summary
 
@@ -48,7 +48,7 @@ Each Plugin has its own Manifest, which contains a map with the following conten
 - `name`: A unique name identifying the Plugin.
 - `authors`: One or more authors of the Plugin, for example `Somename, SomeOtherName & Contributors`.
 - `homepage`: A valid URL pointing at a page containing more information about the Plugin.
-- `license`: A license identifier in accordance with the [SPDX license list](https://spdx.org/licenses/).
+- `license`: A license identifier in accordance with the [SPDX license list](https://spdx.org/licenses/), or the string `ALL-RIGHTS-RESERVED`.
 - `version`: The Plugin's version, as currently indexed.
 - `shortDescription`:  A short text describing the Plugin. **Should** be less than 150 and **must** be less than 200 characters.
 - `description`:  A text of arbitrary length describing the Plugin, similar to the Plugin's `about.txt`.
