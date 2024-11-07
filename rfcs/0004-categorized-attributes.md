@@ -32,13 +32,13 @@ This RFC identifies the various components of a _categorized attribute_ as:
 
 _Categorized attributes_ are referred to as _old-form_ when denoted by a string, and _new-form_ when denoted by a _category_+_effect_+_modifier_ combination.
 
-Every _categorized attribute_ MUST be represented by exactly one _category_+_effect_+_modifier_ combination, though some combinations SHOULD not be supported.
+Every _categorized attribute_ MUST be represented by exactly one _category_+_effect_+_modifier_ combination, though some combinations SHOULD NOT be supported.
 
 There MUST be a _default modifier_ indicating the base value of a non over-time effect.
 
 ## Data format
 
-The data format MUST define a keyword for every _category_. It MUST either define a keyword for every _effect_ and _modifier_ individually, or a keyword for every _effect_ and _modifier_ combination. It MUST NOT define a keyword for the _default modifier_
+The data format MUST define a keyword for every _category_. It MUST either define a keyword for every _effect_ and _modifier_ individually, or a keyword for every _effect_ and _modifier_ combination. It MUST NOT define a keyword for the _default modifier_.
 
 These keywords MUST be supported for parsing, and MUST NOT be context-sensitive. These keywords MUST be supported by a parser in a nested approach.
 
@@ -63,7 +63,7 @@ ship <name>
 
 A parser MUST support parsing from a ship, outfit or weapon definition. It MUST support parsing attributes from `attribute` nodes containing mixed _new-form_ and _old-form_ _categorized attributes_. A parser MUST support all _old-form_ and _new-form_ attribute definitions. A parser MAY provide feedback about unsupported attributes.
 
-A parser SHALL provide feedback about unsupported value tokens. It MUST support a value token for the _effect_ node, implying the _default modifier_. It MAY support values for _category_ keywords directly, implying a default _effect_. (This _effect_ SHOULD be different for every _category_.) A parser SHALL support applicable _category_, _effect_ and _modifier_ nodes without a value, assuming a default value of 1. This behaviour SHALL NOT be conditional on the presence of child nodes.
+A parser SHALL provide feedback about unsupported value tokens. It MUST support a value token for the _effect_ node, implying the _default modifier_. It MAY support values for _category_ keywords directly, implying a default _effect_. (This _effect_ SHOULD be different for every _category_.) A parser SHALL support applicable _category_, _effect_ and _modifier_ nodes without a value, assuming a default value of 1. This behaviour MUST NOT be conditional on the presence of child nodes.
 
 A parser MUST abstract the presence of _old-form_ _categorized attributes_ from the engine.
 
@@ -73,7 +73,7 @@ A generator for the save file format MUST support _new-form_ attribute generatio
 
 A generator SHALL use a data node to represent a _category_ and _effect_ or _effect_ + _category_ combination. A generator SHOULD NOT include attributes with their default value.
 
-A generator SHOULD use a deterministic output ordering for attributes, and MAY order them alphabetically.
+A generator SHOULD use a deterministic output ordering for attributes, and MAY order them alphabetically. It SHALL provide the most concise output possible.
 
 A generator MAY NOT support _old-form_ _categorized attributes_.
 
@@ -206,7 +206,7 @@ Though the performance of the final form of this RFC should be better than our c
 
 # Alternatives
 
-We could programmatically generate the _old-form_ attribute names. This would preserver a larger portion of the existing code base and would require no changes from plugin authors, however [past efforts show it to be prohibitively complex](https://github.com/tibetiroka/endless-sky/blob/99108ba344a9de01bcab5eba7f949e39b9bb3758/source/Attribute.cpp#L85-L165).
+We could programmatically generate the _old-form_ attribute names. This would preserve a larger portion of the existing code base and would require no changes from plugin authors, however [past efforts show it to be prohibitively complex](https://github.com/tibetiroka/endless-sky/blob/99108ba344a9de01bcab5eba7f949e39b9bb3758/source/Attribute.cpp#L85-L165).
 
 # Unresolved Questions
 
@@ -214,4 +214,4 @@ Is there a better way of managing compatibility than storing the _old-form_ to _
 
 Is it worth using a Dictionary-style flap map over std::map for storing attributes? Is it really that much faster even for non-_categorized attributes_?
 
-Should the constraints of attribute values be enforced by the individual attribute engines, or the data store? Is the performance cost of enforcing them on every operation worth it? In what cases should we validate the input?
+Should the constraints of attribute values be enforced by the individual attribute entries, or the data store? Is the performance cost of enforcing them on every operation worth it? In what cases should we validate the input?
