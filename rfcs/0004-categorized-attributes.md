@@ -92,6 +92,8 @@ ramscooping
 cloaking
 afterburning
 firing
+hyperjump
+jump
 ```
 
 It MAY include any or all of the following:
@@ -118,12 +120,8 @@ energy
 fuel
 heat
 jam
-```
-
-It MAY include any or all of the following:
-```
-disabled
-minable
+disabled damage
+minable damage
 piercing
 ```
 
@@ -135,7 +133,7 @@ relative
 over time
 ```
 
-The _default modifier_ MUST be `none`.
+The _default modifier_ MUST be `none`, for which a keyword is SHOULD NOT be specified.
 
 ### Implementation
 
