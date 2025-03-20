@@ -69,7 +69,7 @@ A parser MUST abstract the presence of _old-form_ _categorized attributes_ from 
 
 ### Generators
 
-A generator for the save file format MUST support _new-form_ attribute generation. It SHALL NOT generate _old-form_ syntax for _categorized attributes_. It MUST NOT generate duplicate entries of the _category_, _effect_, _modifier_ or combined _modifier_ + _effect_ keywords.
+A generator for the save file format MUST support _new-form_ attribute generation. It SHALL NOT generate _old-form_ syntax for _categorized attributes_. It MUST NOT generate duplicate entries of the _category_, _effect_, _modifier_, or combined _modifier_ + _effect_ keywords.
 
 A generator SHALL use a data node to represent a _category_ and _effect_ or _effect_ + _category_ combination. A generator SHOULD NOT include attributes with their default value.
 
