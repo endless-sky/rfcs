@@ -13,7 +13,7 @@ It is a **goal** to maintain compatibility with the old data format, including s
 It is a **non-goal** to provide such access to every attribute.
 It is a **non-goal** to limit the supported set of attributes.
 It is a **non-goal** to coerce the format of the string attributes to allow for generating the attribute names programmatically.
-It is a **non-goal** to maintain parity with the old data format; new attributes might receive engine support wihtout a corresponding old attribute name.
+It is a **non-goal** to maintain parity with the old data format; new attributes might receive engine support without a corresponding old attribute name.
 
 # Motivation
 
