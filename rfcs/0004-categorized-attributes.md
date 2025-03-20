@@ -63,7 +63,7 @@ ship <name>
 
 A parser MUST support parsing from a ship, outfit or weapon definition. It MUST support parsing attributes from `attribute` nodes containing mixed _new-form_ and _old-form_ _categorized attributes_. A parser MUST support all _old-form_ and _new-form_ attribute definitions. A parser MAY provide feedback about unsupported attributes.
 
-A parser SHALL provide feedback about unsupported value tokens. It MUST support a value token for the _effect_ node, implying the _default modifier_. It MAY support values for _category_ keywords directly, implying a default _effect_. (This _effect_ SHOULD be different for every _category_.) A parser SHALL support applicable _category_, _effect_ and _modifier_ nodes without a value, assuming a default value of 1. This behaviour MUST NOT be conditional on the presence of child nodes.
+A parser SHALL provide feedback about unsupported value tokens. It MUST support a value token for the _effect_ node, implying the _default modifier_. It MAY support values for _category_ keywords directly, implying a default _effect_. (This _effect_ SHOULD be different for every _category_.) A parser SHALL support applicable _category_, _effect_, and _modifier_ nodes without a value, assuming a default value of 1. This behaviour MUST NOT be conditional on the presence of child nodes.
 
 A parser MUST abstract the presence of _old-form_ _categorized attributes_ from the engine.
 
