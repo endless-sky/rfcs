@@ -7,7 +7,7 @@
 This is a proposal for a list of keywords that sets limits on the locations where players and NPCs can arrive into a system and depart from a system.
 
 # Motivation
-The arrival distance modifiers could improve space battles (because long range weapons make more sense when fleets start further away from eachother).
+The arrival distance modifiers could improve space battles (because long range weapons make more sense when fleets start further away from each other).
 The arrive and departure distance modifiers were also present in Escape Velocity, so adding those features will also improve the options for using Endless Sky for a port of Escape Velocity.
 
 # Detailed Design
@@ -24,7 +24,7 @@ departure <min> [<max>] ["link"] ["jump"]
     angle <nr>
 ```
 
-System property and/or planet property. The <min> indicates the minimum distance that a ships needs to be away from respectively the system center or planet center before the ship can start a jump.
+System property and/or planet property. The <min> indicates the minimum distance that a ship needs to be away from respectively the system center or planet center before the ship can start a jump.
 If a maxium is given, then a ship needs to be no more than distance away from the centers to be able to leave.
 
 ### Angle
@@ -35,8 +35,8 @@ For example if planet Amazon would have a angle restriction of 45 degrees for ju
 
 ### Multiple properties
 
-If multiple properties are given, then all departure constraints need to be fullfilled before a ship can make the jump.
-Content creators need to be aware of blocking jumps if constraints are conflicting, they might also acutally want to use this, for example by having a system where jumps are only possible once every four days (due to planet alignments).
+If multiple properties are given, then all departure constraints need to be fulfilled before a ship can make the jump.
+Content creators need to be aware of blocking jumps if constraints are conflicting, they might also actually want to use this, for example, by having a system where jumps are only possible once every four days (due to planet alignments).
 
 
 ## Ship Arrival/departure modifiers
@@ -48,7 +48,7 @@ arrival [<min>] ["link"] ["jump"]
 departure [<min> [<max>]] ["link"] ["jump"]
 	modifier <nr>
 ```
-Ships properties. <min> gives the minimum arrival and departure distances for ships. If a system or planet also has minimum arrival and departure distances then the maximum of all distances will be used for the actual distance.
+Ship properties. <min> gives the minimum arrival and departure distance for ships. If a system or planet also has minimum arrival and departure distances then the maximum of all distances will be used for the actual distance.
 Ships can also have a maximum departure distance (if a minimum is set).
 The min property is optional; it is also possible that only a modifier gets set.
 A modifier can be given to "widen" or "narrow" the windows at which ships can depart, where positive numbers widen the range.
@@ -92,5 +92,5 @@ The `combat visibility` option could be stronger, for example by incorporating h
 The keywords might be named differently and we might change the workings of one or more features (instead of some maximum ranges, use minimum ranges).
 
 # Unresolved Questions
-As indicated above, `combat visiblity` still has quite some room for improvement.
+As indicated above, `combat visibility` still has quite some room for improvement.
 Players might also want to set the arrive distances manualy. That is not included in this RFC (neither why we don't allow it and neither how it would work if we do allow it).
