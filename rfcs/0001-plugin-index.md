@@ -60,7 +60,7 @@ Each Plugin has its own Manifest, which contains a map with the following conten
     - `commit`: Clones `update_url` as git repository and checks `branch` for new commits.
   - `update_url`: A valid URL complementing `type`. May be omitted, in which case `homepage` shall be used instead.
   - `branch`: Allows for special branches to be used when `type` is `commit`. If omitted, the default branch will be used instead.
-  - `regex`: If `type` is `tag`, only tags whose name matches this regular expression will be considered. May be omitted.
+  - `regex`: If `type` is `tag`, only tags whose name (fully or partially) matches this regular expression will be considered. Implementations should be PCRE2-compliant. May be omitted.
   - Any other key-value pairs will be interpreted as update keys:
     - They may contain `$version` as a substitution key
     - Upon detecting a new version, all occurences of `$version` will be replaced with the version detected using `type`.
