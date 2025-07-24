@@ -120,7 +120,7 @@ When the player enters a system with a music node defined, the following happens
 When a mission trigger plays a `track`, the behaviour is different:
 1. The current `track` stops playback. The active `playlist` is discarded.
 2. The mission's `track` starts playing from the beginning. `Variant`-related playback rules are NOT followed.
-3. When the mission's `track` finishes, a new `playlist` is chosen as usual. There is no guarantee tha the previously playing `playlist` will be resumed here.
+3. When the mission's `track` finishes, a new `playlist` is chosen as usual. There is no guarantee that the previously playing `playlist` will be resumed here.
 
 > [!NOTE]
 > An experimental demo of this system is available at https://tibetiroka.com/music with limited functionality.
