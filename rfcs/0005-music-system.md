@@ -1,7 +1,7 @@
 - Feature Name: Music system
 - Affected audience: Game developers, plugin creators, composers
 - RFC PR: Coming soon. Waiting on previous audio PRs.
-- Relevant Issues/RFCs: #233, #3594, #6749, #7538, #9539, #10008, #10658, #11065, #11664, and the #Music for Endless Sky thread in the discord server.
+- Relevant Issues/RFCs: #233, #3594, #6749, #7538, #9539, #10008, #10658, #11065, #11664, and the #Music for Endless Sky thread in the Discord server.
 
 # Summary
 This RFC defines a multi-layered music system with full backwards compatibility, supporting extensions via plugins.
@@ -99,7 +99,7 @@ Usually, when `tracks` are switched during playback, the new `track` begins play
 ## Runtime behaviour
 
 When there is no music playing and there are available `playlists`, a random one is chosen for playback. Its `tracks` are shuffled and played without repetition until either:
-- each `track` was played once, or
+- each `track` has been played once, or
 - the `playlist`'s conditions no longer match.
 
 When this happens and no other `playlist` is available, the `playlist` stops playing the current `track`, fading into silence.
