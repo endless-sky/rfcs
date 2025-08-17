@@ -49,7 +49,7 @@ In some cases, we may want to have multiple, slightly different versions of a `t
  - For the "combat" soundtrack, do the same but with the inverse "combative" `condition`.
  - For each `track` that has both a "combat" and "relaxed" version, create a `variant`.
 
-A `variant` is basically a pairing of two `tracks` that tells the engine "these are pretty much the same, just switch them out and keep playing from the same position, and skip the fade". When the current `track` changes, their `variant` status is checked. If they are `variants`, there is no fade.
+A `variant` is basically a pairing of two or more `tracks` that tells the engine "these are pretty much the same, just switch them out and keep playing from the same position, and skip the fade". When the current `track` changes, their `variant` status is checked. If they are `variants`, there is no fade.
 
 There is also a special `track` keyword `silence`. This can be used in place of a `track`'s name in a `playlist` definition to signify a duration of silence. This `silence` keyword is also available in `track` definitions in place of a filename to enable silent `background` or `foreground` layers.
 
