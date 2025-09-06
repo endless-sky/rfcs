@@ -1,6 +1,6 @@
 - Feature Name: Music system
 - Affected audience: Game developers, plugin creators, composers
-- RFC PR: Coming soon. Waiting on previous audio PRs.
+- RFC PR: https://github.com/endless-sky/endless-sky/pull/11744
 - Relevant Issues/RFCs: #233, #3594, #6749, #7538, #9539, #10008, #10658, #11065, #11664, and the #Music for Endless Sky thread in the Discord server.
 
 # Summary
